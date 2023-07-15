@@ -1,0 +1,19 @@
+:root {
+  --primary-color: #ff6060;
+
+  --primary-text-color: #ff6060;
+  --secondary-text-color: #FFF;
+
+  --main-police: 'Montserrat', sans-serif;
+
+  // size text
+  --main-font-size: 16px;
+  --xs-text: 0.750rem;
+  --s-text: 1rem;
+  --m-text: 1.250rem;
+  --l-text: 1.5rem;
+  --xl-text: 2rem;
+  --xxl-text: 3rem;
+
+  --app-width: clamp(375px, 100%, 1400px)
+}
