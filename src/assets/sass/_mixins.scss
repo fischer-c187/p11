@@ -1,5 +1,0 @@
-@mixin desktop-only {
-  @media screen and (width >= 768px) {
-    @content
-  }
-}

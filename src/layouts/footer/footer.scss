@@ -1,0 +1,22 @@
+.footer {
+  background-color: black;
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  color: var(--secondary-text-color);
+  padding: 2em 0;
+  font-size: var(--xs-text);
+  font-weight: 500;
+
+  &__logo {
+    width: 122px;
+    margin-bottom: 1em;
+    fill: var(--secondary-text-color);
+  }
+}
+
+@media screen and (width >= 768px) {
+  .footer {
+    font-size: var(--l-text);
+  }
+}

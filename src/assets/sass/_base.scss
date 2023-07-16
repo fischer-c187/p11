@@ -10,9 +10,27 @@ body {
   min-width: 375px;
 }
 
-#root {
+.wrapper {
+  height: 100%;
   width: var(--app-width);
+  padding: 0 min(5%, 100px);
+  margin: 0 auto;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   margin: auto;
-  padding: 0 min(5%, 100px);
+}
+
+main {
+  padding: 1rem 0;
+}
+
+@media (width >= 768px) {
+  main {
+    padding: 4rem 0;
+  }
+  
 }

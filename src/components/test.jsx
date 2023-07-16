@@ -1,4 +1,6 @@
+import { Hero } from './hero/hero';
+import image from '../assets/images/montagne.png';
+
 export function Test() {
-  const Balise = 'p';
-  return <Balise>home</Balise>;
+  return <Hero image={image} text='Chez vous, partout et ailleurs'/>;
 }

@@ -1,0 +1,48 @@
+@import '../../assets/sass/animation';
+
+.hero {
+  height: 111px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: .5em;
+  font-size: var(--l-text);
+  position: relative;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  animation: fade-in 800ms ease-out;
+
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    
+    transform: translateY(-50%);
+    overflow: hidden;
+
+    & span {
+      display: block;
+      margin: 0 1rem;
+      animation: textAppearFromBottom 800ms 500ms cubic-bezier(.18,.89,.32,1.28) both;
+    }
+    
+  }
+}
+
+@media screen and (width >= 768px) {
+  .hero {
+    height: 223px;
+    font-size: var(--xxl-text);
+
+    &__text {
+      width: 100%;
+      text-align: center;
+      left: 0;
+    }
+  }
+}
