@@ -1,3 +1,4 @@
 export function Test() {
-  return <h1>home</h1>;
+  const Balise = 'p';
+  return <Balise>home</Balise>;
 }

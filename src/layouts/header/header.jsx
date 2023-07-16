@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './header.scss';
 import logo from '../../assets/images/logo.svg';
 
@@ -12,7 +12,11 @@ export function Header () {
   
   return (
     <header className="header">
-      <img src={logo} className='header__logo' alt="logo kasa" aria-hidden="true"/>
+      <Link to='/' className='header__logo-link'>
+        <img src={logo} className='header__logo' alt="logo kasa" aria-hidden="true"/>
+      </Link>
+      
+
 
       <nav className="header__navbar">
         <ul className='header__list'>
