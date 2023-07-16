@@ -2,21 +2,21 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import { PageLayout } from './layouts/page';
 import { Test } from './components/test';
 import { ErrorPage } from './pages/errorPage';
+import { loaderId, loaderAllLocation } from './utils/loader';
 
-function Router() {
+function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<PageLayout />} errorElement={<ErrorPage />}>
-        <Route index element={<Test />} />
-        <Route path='annonce/:id' element={<Test />} />
+        <Route index element={<Test />} loader={loaderAllLocation}/>
+        <Route path='annonce/:id' element={<Test />} loader={loaderId}/>
         <Route path='a-propos' element={<Test />} />
       </Route>
-
     )
   );
 
   return <RouterProvider router={router} />;
 }
 
-export default Router;
+export default App;

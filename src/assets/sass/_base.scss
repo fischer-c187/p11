@@ -1,12 +1,15 @@
+html, body, #root {
+  // height: fit-content;
+  min-height: 100vh;
+}
+
 html {
-  height: 100%;
   font-size: var(--main-font-size);
   color: var(--primary-text-color);
   font-family: var(--main-police);
 }
 
 body {
-  height: 100%;
   min-width: 375px;
 }
 
