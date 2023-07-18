@@ -1,0 +1,29 @@
+@import '../../assets/sass/animation.scss';
+
+.rating-icon {
+  width: 14px;
+  height: 14px;
+  
+  &__star {
+    fill: #E3E3E3;
+  }
+  
+  &__square {
+    transform: translateX(-200%) rotate(55deg);
+    transform-origin: center;
+    fill: #FF6060;
+    width: 200%;
+    height:200%;
+  }
+  
+  &--active {
+    .rating-icon__square {
+      animation: fill-star 400ms ease-in both;
+    }
+  }
+
+  @media (width >= 768px) {
+    width: 25px;
+    height: 25px;
+  }
+}

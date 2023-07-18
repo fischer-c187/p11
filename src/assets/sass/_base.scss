@@ -16,7 +16,8 @@ body {
 .wrapper {
   height: 100%;
   width: var(--app-width);
-  padding: 0 min(5%, 100px);
+  min-width: 375px;
+  padding: 0 5%;
   margin: 0 auto;
 }
 
@@ -34,6 +35,10 @@ main {
 @media (width >= 768px) {
   main {
     padding: 4rem 0;
+  }
+
+  .wrapper {
+    padding: 0 5rem;
   }
   
 }

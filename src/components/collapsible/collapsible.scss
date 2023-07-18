@@ -1,0 +1,42 @@
+.collapsible {
+
+  &__button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+    padding: 0.5em;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: var(--s-text);
+    position: relative;
+    z-index: 100;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    transition: transform 300ms linear;
+
+    &--rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__text-wrapper {
+    max-height: 0;
+    position: relative;
+    top: -8px;
+    overflow: hidden;
+    transition: max-height 500ms ease-in;
+
+  }
+
+  &__text {
+    background-color: #F6F6F6;
+    padding: 1.5em 1em 1em;
+    height: 100%;
+  }
+}

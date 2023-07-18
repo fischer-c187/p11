@@ -1,0 +1,16 @@
+.location-gallery {
+  display: grid;
+  grid-template: clamp(255px, 30vw, 340px) / repeat(auto-fit, minmax(330px, 1fr));
+  grid-auto-rows: clamp(255px, 30vw, 340px);
+  justify-content: center;
+  justify-items: center;
+  border-radius: 1.5rem;
+  gap: 1em;
+
+  @media (width >= 768px) {
+    padding: min(5%, 3rem);
+    background-color: var(--gallery-background-color);
+    gap: min(2vw, 3rem);
+    justify-content: space-around;
+  }
+}
