@@ -3,14 +3,14 @@ import image from '../assets/images/montagne.png';
 import { useLoaderData } from 'react-router-dom';
 import { Collapsible } from './collapsible/collapsible';
 import { Rating } from './rating/rating';
+import { Owner } from './owner/owner';
 
 export function Test() {
   const location = useLoaderData();
 
   return (
     <>
-      <Collapsible title='test' text='rrrrr' />
-      <Rating rating={3}/>
+      <Owner image={image} name='morgan dealmeidathierry' />
     </>
   );
 }
