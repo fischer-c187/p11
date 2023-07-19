@@ -4,13 +4,14 @@ import { useLoaderData } from 'react-router-dom';
 import { Collapsible } from './collapsible/collapsible';
 import { Rating } from './rating/rating';
 import { Owner } from './owner/owner';
+import { Tag } from './tag/tag';
 
 export function Test() {
   const location = useLoaderData();
 
   return (
     <>
-      <Owner image={image} name='morgan dealmeidathierry' />
+      <Tag text='Paris 10' animation={true} />
     </>
   );
 }

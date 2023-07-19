@@ -1,0 +1,27 @@
+@import '../../assets/sass/animation';
+
+.tag {
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
+  width: fit-content;
+  min-width: 84px;
+  height: 18px;
+  line-height: 18px;
+  font-size: var(--xs-text);
+  font-weight: 500;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0 1em;
+
+  &__text--animation {
+    animation: fade-in 700ms ease-out;
+  }
+
+  @media (width >= 768px) {
+    font-size: var(--s-text);
+    height: 25px;
+    line-height: 25px;
+    min-width: 115px;
+    border-radius: 10px;
+  }
+}
