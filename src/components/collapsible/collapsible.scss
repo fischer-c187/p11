@@ -39,4 +39,16 @@
     padding: 1.5em 1em 1em;
     height: 100%;
   }
+
+  @media (width >= 768px) {
+    &__button {
+      font-size: var(--m-text);
+    }
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+    }
+    
+  }
 }

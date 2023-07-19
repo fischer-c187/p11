@@ -10,7 +10,7 @@ export function Test() {
   return (
     <>
       <Collapsible title='test' text='rrrrr' />
-      <Rating rating={2}/>
+      <Rating rating={3}/>
     </>
   );
 }
