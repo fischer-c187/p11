@@ -1,0 +1,23 @@
+.title-location {
+  padding: .75em 0;
+  font-weight: 500;
+
+  &__title {
+    font-size: var(--m-text);
+  }
+
+  &__location {
+    font-size: var(--s-text);
+    margin-top: .5em;
+  }
+
+  @media (width >= 768px) {
+    &__title {
+      font-size: var(--xl-text);
+    }
+
+    &__location {
+      font-size: var(--m-text);
+    }
+  }
+}

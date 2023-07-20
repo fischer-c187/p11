@@ -27,18 +27,15 @@ body {
   height: 100%;
   margin: auto;
 }
-
 main {
   padding: 1rem 0;
 }
 
 @media (width >= 768px) {
   main {
-    padding: 4rem 0;
+    padding: 2rem 0;
   }
-
-  .wrapper {
+ .wrapper {
     padding: 0 5rem;
   }
-  
 }

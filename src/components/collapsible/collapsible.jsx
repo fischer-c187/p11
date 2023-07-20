@@ -44,8 +44,15 @@ export function Collapsible({ title, text }) {
           aria-hidden='true'
         />
       </button>
-      <div className='collapsible__text-wrapper' style={{maxHeight: isOpen ? `${height}px` : '0'}}>
-        {<p ref={refP} className='collapsible__text'>{text}</p>}
+      <div ref={refP} className='collapsible__text-wrapper' style={{maxHeight: isOpen ? `${height}px` : '0'}}>
+        <div className='collapsible__text'>
+          {Array.isArray(text)
+            ? text.map((item, index) => (
+              <p key={index}>{item}</p>
+            ))
+            : <p>{text}</p>
+          }
+        </div>
       </div>
       
     </div>

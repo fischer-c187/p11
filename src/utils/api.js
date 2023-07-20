@@ -13,10 +13,10 @@ export async function getAllLocation() {
 
 export async function getLocationWithId(id) {
   const response = await getAllLocation();
-  const location =response.find(location => location.id === id);
+  const location = response.find(location => location.id === id);
   if(!location) {
     throw new Error(`Not found location with this id: ${id}`);
   }
-
+  console.log(location);
   return location;
 }
