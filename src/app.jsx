@@ -15,7 +15,9 @@ function App() {
         <Route path='annonce/:id' element={<Rental />} loader={loaderId}/>
         <Route path='a-propos' element={<About title='A propos - kasa' />} loader={loaderAllLocation}/>
       </Route>
-    )
+    ), {
+      basename: '/p11/',
+    }
   );
 
   return <RouterProvider router={router} />;
