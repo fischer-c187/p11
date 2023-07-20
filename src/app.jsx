@@ -1,11 +1,10 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { PageLayout } from './layouts/page';
-import { Test } from './components/test';
-import { ErrorPage } from './pages/errorPage';
 import { loaderId, loaderAllLocation } from './utils/loader';
 import { Home } from './pages/home/home';
 import { Rental } from './pages/rental/rental';
 import { About } from './pages/about/about';
+import { ErrorPage } from './pages/error/error';
 
 function App() {
 

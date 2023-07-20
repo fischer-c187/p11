@@ -1,0 +1,29 @@
+.error {
+  text-align: center;
+  padding-top: 8rem;
+
+
+  &__title {
+    font-size: max(6rem, 10vw);
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: max(var(--m-text), 2vw);
+    margin: .5rem 0 8rem 0;
+    font-weight: 500;
+  }
+
+  &__link {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  @media (width >= 768px) {
+    padding-top: 5rem;
+
+    &__link {
+      font-size: var(--m-text);
+    }
+  }
+}
