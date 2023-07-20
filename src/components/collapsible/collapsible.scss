@@ -47,6 +47,7 @@
   @media (width >= 768px) {
     &__button {
       font-size: var(--m-text);
+      border-radius: 10px;
     }
 
     &__icon {

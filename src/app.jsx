@@ -5,6 +5,7 @@ import { ErrorPage } from './pages/errorPage';
 import { loaderId, loaderAllLocation } from './utils/loader';
 import { Home } from './pages/home/home';
 import { Rental } from './pages/rental/rental';
+import { About } from './pages/about/about';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
       <Route path='/' element={<PageLayout />} errorElement={<ErrorPage />}>
         <Route index element={<Home />} loader={loaderAllLocation}/>
         <Route path='annonce/:id' element={<Rental />} loader={loaderId}/>
-        <Route path='a-propos' element={<Test />} loader={loaderAllLocation}/>
+        <Route path='a-propos' element={<About />} loader={loaderAllLocation}/>
       </Route>
     )
   );
