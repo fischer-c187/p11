@@ -1,4 +1,5 @@
-const URL = '/src/data/logements.json';
+// const URL = '/src/data/logements.json';
+const URL = '/logements.json';
 
 export async function getAllLocation() {
   const response = await fetch(URL);
