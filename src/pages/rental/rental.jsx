@@ -6,9 +6,14 @@ import { Tag } from '../../components/tag/tag';
 import { Rating } from '../../components/rating/rating';
 import { Owner } from '../../components/owner/owner';
 import { Collapsible } from '../../components/collapsible/collapsible';
+import { useEffect } from 'react';
 
 export function Rental() {
   const data = useLoaderData();
+
+  useEffect(() => {
+    document.title = data.title;
+  }, [data.title]);
 
   return (
     <>

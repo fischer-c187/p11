@@ -10,10 +10,10 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<PageLayout />} errorElement={<ErrorPage />}>
-        <Route index element={<Home />} loader={loaderAllLocation}/>
+      <Route path='/' element={<PageLayout />} errorElement={<ErrorPage title='404 - kasa' />}>
+        <Route index element={<Home title='Accueil - kasa' />} loader={loaderAllLocation}/>
         <Route path='annonce/:id' element={<Rental />} loader={loaderId}/>
-        <Route path='a-propos' element={<About />} loader={loaderAllLocation}/>
+        <Route path='a-propos' element={<About title='A propos - kasa' />} loader={loaderAllLocation}/>
       </Route>
     )
   );

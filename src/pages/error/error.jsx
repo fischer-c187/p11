@@ -2,8 +2,14 @@ import { Link } from 'react-router-dom';
 import './error.scss';
 import { Header } from '../../layouts/header/header';
 import { Footer } from '../../layouts/footer/footer';
+import { useEffect } from 'react';
 
-export function ErrorPage() {
+export function ErrorPage({ title }) {
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
   return (
     <>
       <div className='wrapper'>

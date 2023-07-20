@@ -17,6 +17,5 @@ export async function getLocationWithId(id) {
   if(!location) {
     throw new Error(`Not found location with this id: ${id}`);
   }
-  console.log(location);
   return location;
 }
