@@ -2,7 +2,7 @@ import { Collapsible } from '../../components/collapsible/collapsible';
 import './about.scss';
 import image from '../../assets/images/about-image.png';
 import { Hero } from '../../components/hero/hero';
-import { useEffect } from 'react';
+import { useUpdateTitle } from '../../hooks/useUpdateTitle';
 
 const collapseText = [
   {
@@ -25,9 +25,7 @@ const collapseText = [
 
 export function About({ title }) {
 
-  useEffect(() => {
-    document.title = title;
-  }, [title]);
+  useUpdateTitle(title);
 
   return (
     <div className="about">

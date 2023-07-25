@@ -3,12 +3,11 @@ import './error.scss';
 import { Header } from '../../layouts/header/header';
 import { Footer } from '../../layouts/footer/footer';
 import { useEffect } from 'react';
+import { useUpdateTitle } from '../../hooks/useUpdateTitle';
 
 export function ErrorPage({ title }) {
 
-  useEffect(() => {
-    document.title = title;
-  }, [title]);
+  useUpdateTitle(title);
 
   return (
     <>

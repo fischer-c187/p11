@@ -8,6 +8,7 @@ import { ErrorPage } from './pages/error/error';
 
 function App() {
 
+  // The 'basename' property in the router is specifically set for the purpose of hosting this site on GitHub Pages.
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<PageLayout />} errorElement={<ErrorPage title='404 - kasa' />}>

@@ -4,14 +4,12 @@ import { RentalGallery } from '../../layouts/rentalGallery/rentalGallery';
 import './home.scss';
 import { Hero } from '../../components/hero/hero';
 import { useEffect } from 'react';
+import { useUpdateTitle } from '../../hooks/useUpdateTitle';
 
 export function Home({ title }) {
   const location = useLoaderData();
 
-  useEffect(() => {
-    document.title = title;
-  }, [title]);
-
+  useUpdateTitle(title);
   return (
     <>
       <Hero image={image} text='Chez vous, partout et ailleurs'/>

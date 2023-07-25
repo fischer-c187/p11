@@ -7,13 +7,12 @@ import { Rating } from '../../components/rating/rating';
 import { Owner } from '../../components/owner/owner';
 import { Collapsible } from '../../components/collapsible/collapsible';
 import { useEffect } from 'react';
+import { useUpdateTitle } from '../../hooks/useUpdateTitle';
 
 export function Rental() {
   const data = useLoaderData();
 
-  useEffect(() => {
-    document.title = data.title;
-  }, [data.title]);
+  useUpdateTitle(data.title);
 
   return (
     <>
