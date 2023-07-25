@@ -7,7 +7,7 @@ export function CardRental({ image, name, id }) {
       <Link to={`/annonce/${id}`} className='card-location__link'>
         <img
           src={image}
-          alt='location illustration'
+          alt='rental illustration'
           className='card-location__image'
           aria-hidden='true'
         />

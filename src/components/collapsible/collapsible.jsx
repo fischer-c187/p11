@@ -8,22 +8,26 @@ export function Collapsible({ title, text }) {
   const refP = useRef(null);
 
   useEffect(() => {
-    if (refP.current) {
-      setHeight(refP.current.scrollHeight);
-    }
-  }, []);
+    let timer = null;
 
-  useEffect(() => {
-    const handleResize = () => {
+    function updateHeight() {
       if (refP.current) {
         setHeight(refP.current.scrollHeight);
       }
-    };
+    }
 
-    window.addEventListener('resize', handleResize);
+    function debouncedUpdateHeight() {
+      clearTimeout(timer);
+      timer = setTimeout(updateHeight, 200); 
+    }
+
+    updateHeight();
+
+    window.addEventListener('resize', debouncedUpdateHeight);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', debouncedUpdateHeight);
+      clearTimeout(timer);
     };
   }, []);
 
@@ -32,7 +36,7 @@ export function Collapsible({ title, text }) {
       <button
         type='button'
         className='collapsible__button'
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(prevState => !prevState)}
       >
         {title}
         <img
