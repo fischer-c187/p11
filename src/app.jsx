@@ -14,7 +14,6 @@ function App() {
         <Route index element={<Home title='Accueil - kasa' />} loader={loaderAllLocation}/>
         <Route path='annonce/:id' element={<Rental />} loader={loaderId}/>
         <Route path='a-propos' element={<About title='A propos - kasa' />} loader={loaderAllLocation}/>
-        <Route path='*' element={<ErrorPage title='404 - kasa' />} />
       </Route>
     ), {
       basename: '/p11/',
