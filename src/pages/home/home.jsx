@@ -7,13 +7,13 @@ import { useEffect } from 'react';
 import { useUpdateTitle } from '../../hooks/useUpdateTitle';
 
 export function Home({ title }) {
-  const location = useLoaderData();
+  const data = useLoaderData();
 
   useUpdateTitle(title);
   return (
     <>
       <Hero image={image} text='Chez vous, partout et ailleurs'/>
-      <RentalGallery data={location} />
+      <RentalGallery data={data} />
     </>
   );
 }

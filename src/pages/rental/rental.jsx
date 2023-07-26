@@ -35,8 +35,6 @@ export function Rental() {
         <Collapsible title='Description' text={data.description} />
         <Collapsible title='Equipements' text={data.equipments} />
       </div>
-    
-     
     </>
   );
 }
