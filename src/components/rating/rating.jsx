@@ -7,7 +7,7 @@ export function Rating({ rating }) {
       {Array.from({ length: 5 }, (_, i) => (
         <Star
           key={i}
-          isActive={i < rating ? true : false}
+          isActive={i < rating}
           delay={i * 150}
           startDelay={75}
         />
