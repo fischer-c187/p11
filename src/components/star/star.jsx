@@ -1,5 +1,16 @@
 import './star.scss';
 
+
+/**
+ * Renders a star. If the star is active, it is displayed "full". At the start of the page, we have an animation
+ * that goes from "not full" to "full".
+ *
+ * @param {object} props The properties passed to the component.
+ * @param {Boolean} [isActive=false] If the star is active, the star is displayed as "full".
+ * @param {number} [delay=0] The delay for the animation.
+ * @param {number} [startDelay=0] The delay before starting the animation.
+ * @returns {React.Component} The JSX for the Star component.
+ */
 export function Star({ isActive = false, delay=0, startDelay=0 }) {
   return (
     <svg

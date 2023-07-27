@@ -1,6 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 import './carousel.scss';
 
+/**
+ * Carousel component that displays a series of images. If multiple images are present,
+ * navigation controls are provided to cycle through the images.
+ * @param {Object} props Component properties
+ * @param {Array.<string>} props.images An array of URLs pointing to the images to be displayed
+ * @returns {React.Component} JSX for Carousel component
+ */
 export function Carousel({ images }) {
   const [index, setIndex] = useState(0);
   const imgRef = useRef(null);
@@ -12,6 +19,7 @@ export function Carousel({ images }) {
         imgRef.current.classList.add('carousel__img--fade-in');
       }, 150);
 
+      // The cleanup callback within the useEffect is performed only when necessary
       return () => clearTimeout(timeout);
     }
   }, [index]);

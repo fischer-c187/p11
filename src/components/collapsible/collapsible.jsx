@@ -2,6 +2,15 @@ import { useEffect, useRef, useState } from 'react';
 import './collapsible.scss';
 import iconArrow from '../../assets/images/arrow_back.svg';
 
+/**
+ * Renders a Collapsible component. When clicked on, the content toggles between hide and show.
+ *
+ * @param {Object} props The properties passed to the component.
+ * @param {String} props.title The title of the component, which is displayed on the button.
+ * @param {String | String[]} props.text The text content of the collapsible component.
+ * 
+ * @returns {React.Component} The Collapsible component.
+ */
 export function Collapsible({ title, text }) {
   const [isOpen, setIsOpen] = useState(false);
   const [height, setHeight] = useState(0);
@@ -16,11 +25,13 @@ export function Collapsible({ title, text }) {
       }
     }
 
+    // Debounces the update function for performance improvement.
     function debouncedUpdateHeight() {
       clearTimeout(timer);
       timer = setTimeout(updateHeight, 200); 
     }
 
+    // initial height value
     updateHeight();
 
     window.addEventListener('resize', debouncedUpdateHeight);
