@@ -6,9 +6,14 @@ import { Tag } from '../../components/tag/tag';
 import { Rating } from '../../components/rating/rating';
 import { Owner } from '../../components/owner/owner';
 import { Collapsible } from '../../components/collapsible/collapsible';
-import { useEffect } from 'react';
 import { useUpdateTitle } from '../../hooks/useUpdateTitle';
 
+
+/**
+ * Displays detailed information about a specific rental.
+ * This function retrieves rental data using the useLoaderData hook.
+ * @returns {React.Component} JSX for displaying the rental page.
+ */
 export function Rental() {
   const data = useLoaderData();
 
@@ -28,7 +33,7 @@ export function Rental() {
         </div>
         <div className="owner-description">
           <Rating rating={data.rating} />
-          <Owner image={data.host.picture} name={data.host.name}/>
+          <Owner image={data.host.picture} name={data.host.name} />
         </div>
       </div>
       <div className="collapse-wrapper">

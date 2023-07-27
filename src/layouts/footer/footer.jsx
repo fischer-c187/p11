@@ -1,5 +1,9 @@
 import './footer.scss';
 
+/**
+ * Renders the footer, which includes the logo and copyright notice.
+ * @returns {React.Component} JSX for the Footer component.
+ */
 export function Footer() {
   return (
     <footer className='footer'>

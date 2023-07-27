@@ -2,6 +2,10 @@ import { Link, NavLink } from 'react-router-dom';
 import './header.scss';
 import logo from '../../assets/images/logo.svg';
 
+/**
+ * Renders the Header component, which includes a logo and navigation with two links.
+ * @returns {React.Component} JSX for the Header component.
+ */
 export function Header () {
 
   function activeLink({isActive}) {
@@ -15,8 +19,6 @@ export function Header () {
       <Link to='/' className='header__logo-link'>
         <img src={logo} className='header__logo' alt="logo kasa" aria-hidden="true"/>
       </Link>
-      
-
 
       <nav className="header__navbar">
         <ul className='header__list'>
@@ -34,7 +36,6 @@ export function Header () {
           </li>
         </ul>
       </nav>
-
     </header>
   );
 }
