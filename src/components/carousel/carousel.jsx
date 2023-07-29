@@ -61,6 +61,7 @@ export function Carousel({ images }) {
   return (
     <div className='carousel'>
       <img
+        key={index}
         ref={imgRef}
         src={images[index]}
         alt='image du logement'
