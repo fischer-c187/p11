@@ -17,11 +17,15 @@ function App() {
   // The 'basename' property in the router is specifically set for the purpose of hosting this site on GitHub Pages.
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<AppLayout />} errorElement={<ErrorPage title='404 - kasa' />}>
-        <Route index element={<Home title='Accueil - kasa' />} loader={loaderAllLocation}/>
-        <Route path='annonce/:id' element={<Rental />} loader={loaderId}/>
-        <Route path='a-propos' element={<About title='A propos - kasa' />} loader={loaderAllLocation}/>
-      </Route>
+      <>
+        <Route path='/' element={<AppLayout />} errorElement={<ErrorPage title='404 - kasa' />}>
+          <Route index element={<Home title='Accueil - kasa' />} loader={loaderAllLocation}/>
+          <Route path='annonce/:id' element={<Rental />} loader={loaderId}/>
+          <Route path='a-propos' element={<About title='A propos - kasa' />} loader={loaderAllLocation}/>
+        </Route>
+        <Route path='/*' element={<ErrorPage title='404 - kasa' />} />
+      </>
+
     ), {
       basename: '/p11/',
     }
