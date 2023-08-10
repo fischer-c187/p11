@@ -13,7 +13,6 @@ import { useUpdateTitle } from '../../hooks/useUpdateTitle';
  */
 export function Home({ title }) {
   const data = useLoaderData();
-
   useUpdateTitle(title);
 
   return (

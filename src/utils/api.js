@@ -1,5 +1,4 @@
-const URL = '/p11/logements.json';
-
+const URL = process.env.PUBLIC_URL + '/logements.json';
 
 export async function getAllLocation() {
   const response = await fetch(URL);

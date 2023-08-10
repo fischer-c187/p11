@@ -28,7 +28,7 @@ export function Collapsible({ title, text }) {
     // Debounces the update function for performance improvement.
     function debouncedUpdateHeight() {
       clearTimeout(timer);
-      timer = setTimeout(updateHeight, 200); 
+      timer = setTimeout(updateHeight, 200);
     }
 
     // initial height value

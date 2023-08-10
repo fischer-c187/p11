@@ -14,7 +14,6 @@ import { ErrorPage } from './pages/error/error';
  * @returns {React.Component} Returns a RouterProvider with all the routes for the application.
  */
 function App() {
-  // The 'basename' property in the router is specifically set for the purpose of hosting this site on GitHub Pages.
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
@@ -26,9 +25,7 @@ function App() {
         <Route path='/*' element={<ErrorPage title='404 - kasa' />} />
       </>
 
-    ), {
-      basename: '/p11',
-    }
+    )
   );
 
   return <RouterProvider router={router} />;
